@@ -13,8 +13,8 @@ class File
         "unknown/unknown" 
       end
     else
-      require 'filemagic'
-      fm = FileMagic.new(FileMagic::MAGIC_MIME)
+      require 'ffi_file_magic'
+      fm = FFIFileMagic.new(FFIFileMagic::MAGIC_MIME)
       case file
       when File
         fm.file(file.path)
